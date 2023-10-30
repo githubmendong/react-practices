@@ -1,5 +1,9 @@
-ex01: 전통적인 DOM기반 기반의 Application
-
-1. DOM API를 직접 JavaScript 코드로 호출
-2. 주로 DOM API에 특화되어 있는 jQuery 라이브러리를 사용한다.
-3. 장점은 작성된 애플리케이션 코드 전달이 쉽다.(HTML에 작성된 js 링크)
+애플리케이션 모듈(js, css, scss/sass, images, font)들을 `의존성 분석` 을 하여 하나의 `js` 로 묶는 도구
+2. 최종 결과물인 하나의 `js` 파일을 번들(bundle) 이라 하고 묶는 작업을 (bundling) 이라 한다.
+3. 빌드작업(js)
+	1. linting(EsLint, 문법체크) 작업
+	2. document(JSDocs) 작업
+	3. test(Mocha, jest) 작업
+	4. 난독/압축(uglify) 작업
+	5. 번들링
+4. js 모듈뿐만 아니라 에셋(images, css, sass/scss, font
