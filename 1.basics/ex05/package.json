@@ -1,7 +1,7 @@
 {
   "name": "ex05",
   "version": "1.0.0",
-  "description": "ex06: image 모듈 번들링",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "npx webpack serve --progress",
@@ -12,10 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.8.1",
-    "loader": "^2.1.1",
     "node-sass": "^9.0.0",
     "sass-loader": "^13.3.2",
-    "style": "^0.0.3",
     "style-loader": "^3.3.3",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
