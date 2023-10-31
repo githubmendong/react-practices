@@ -1,25 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FoodListItem from './FoodListItem';
 
-class FoodList extends Component {
-
-    render() {
-        return (
-            <div>
-                <ul>
-                    <FoodListItem
-                        name='Bread'
-                        quantity='2'/>
-                    <FoodListItem
-                        name='Milk'
-                        quantity='5'/>
-                    <FoodListItem
-                        name='Egg'
-                        quantity='20'/>
-                </ul>
-            </div>
-        );
-    }
+function FoodList(props) {
+    return (
+        <ul>
+            <FoodListItem name={'Bread'} count={10} />
+            <FoodListItem name={'Egg'} count={20} />
+            <FoodListItem name={'Milk'} count={5} />
+        </ul>
+    );
 }
 
 export default FoodList;

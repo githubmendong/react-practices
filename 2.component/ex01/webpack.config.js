@@ -1,34 +1,33 @@
 const path = require('path');
 
-module.exports = function(env) { 
+module.exports = function(env) {
     return {
-        mode: 'development',
+        mode: "development",
         entry: path.resolve(`src/${env.src}/index.js`),
         output: {
             path: path.resolve('public'),
-            filename: 'main.js',
-            assetModuleFilename:'assets/images/[hash][ext]'
+            filename: 'assets/js/main.js',
+            assetModuleFilename: 'assets/images/[hash][ext]'
         },
-        module:{
+        module: {
             rules:[{
-                test: /\.js$/i,
+                test: /\.js/i,
                 exclude: /node_modules/,
                 use: 'babel-loader'
             }, {
-                test: /\.(sa|sc|c)ss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                test: /\.(c|sa|sc)ss$/i,
+                use:['style-loader', 'css-loader', 'sass-loader']
             }, {
-                test: /\.(png|gif|jpe?g|svg|ico|tiff?|bmp)$/i,
+                test: /\.(png|gif|jp?eg|svg|ico|tif?f|bmp)/i,
                 type: 'asset/resource'
             }]
         },
-        devtool: "eval-source-map",
         devServer: {
             host: '0.0.0.0',
             port: 9090,
             liveReload: true,
-            hot: true,
-            compress: true
-        }
-    }
+            compress: true,
+            hot: false
+        }    
+    };
 }

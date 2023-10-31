@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FoodList from './FoodList';
 
-class App extends Component {
-    render() {
-        return (
-            <div id='App'>
-               <FoodList />
-            </div>
-        );
-    }
+function App() {
+    return (
+        <div id={'App'}>
+            <FoodList />
+        </div>
+    );
 }
 
-export default App;
+export {App};

@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FoodListItem extends Component {
-    render() {
-        return (
-            <li>{this.props.name}: {this.props.quantity}</li>
-        );
-    }
+function FoodListItem({name, count}) {
+    return (
+        <li>{name}: {count}</li>
+    );
 }
 
 export default FoodListItem;

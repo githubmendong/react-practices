@@ -1,33 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FoodListItem from './FoodListItem';
 
-class FoodList extends Component {
-    constructor(props) {
-        super(props);
-    }
+function FoodList({foods}) {
+    // const foodItems = [];
+    // foods.forEach((food) => {
+    //     foodItems.push(<FoodListItem name={food.name} count={food.count}/>);
+    // });
 
-    render() {
-        // const components = [];
-        // this.props.foods.forEach(function(food){
-        //     components.push(<FoodListItem name={food.name} quantity={food.quantity} />);
-        // })
+    // const a1 = [1, 2, 3];
+    // const a2 = a1.map((e) => {
+    //     return e*e;
+    // });
+    // console.log(a2);
 
-        // const result = [1, 2, 3, 4].map(function(e){
-        //    return e*e;
-        // });
-        // console.log(result);
-
-        return (
-            <div>
-                <ul>
-                    {this.props.foods.map((food) => <FoodListItem
-                                                        key={food.no}
-                                                        name={food.name}
-                                                        quantity={food.quantity} />)}
-                </ul>
-            </div>
-        );
-    }
+    return (
+        <ul>
+            {
+                foods.map(food => <FoodListItem
+                                        key={food.no}
+                                        name={food.name}
+                                        count={food.count}/>)
+            }
+        </ul>
+    );
 }
 
 export default FoodList;
