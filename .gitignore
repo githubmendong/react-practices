@@ -25,3 +25,4 @@ yarn-error.log*
 /1.basics/ex02/node_modules/
 /1.basics/ex03/node_modules/
 /8.webpack-practice/ex01/node_modules/
+/emaillist/node_modules/
