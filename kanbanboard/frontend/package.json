@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Kanbanboard: Frontend",
   "main": "index.js",
   "scripts": {
     "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development",

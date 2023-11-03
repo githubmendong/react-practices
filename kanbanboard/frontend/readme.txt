@@ -1,4 +1,4 @@
-Kanbanboard: Frontend
+KanbanBoard: Frontend
 
 1.  설치
     1)  개발툴
