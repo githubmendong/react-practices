@@ -1,4 +1,4 @@
-package emaillist.backend.src.main.java.com.poscodx.emaillist.vo;
+package com.poscodx.emaillist.vo;
 
 import lombok.Getter;
 import lombok.Setter;
