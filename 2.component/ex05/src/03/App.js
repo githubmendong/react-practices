@@ -5,10 +5,10 @@ import Clock from './Clock';
 export default class App extends Component {
     constructor(props) {
         super(props);
-        this.state = this._getCurrentClockTime();
+        this.state = this._getCurrentTime();
     }
 
-    _getCurrentClockTime() {
+    _getCurrentTime() {
         const now = new Date();
         const hours = now.getHours();
         return {
@@ -21,19 +21,22 @@ export default class App extends Component {
     }
 
     componentDidMount() {
-        this.interval = setInterval(() => {
-            this.setState(this._getCurrentClockTime());
-        }, 1000);
+        this.intervalId = setInterval(function(){
+            this.setState(this._getCurrentTime());
+        }.bind(this), 1000);
     }
 
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+    
     render() {
         return (
             <div className='clock-display'>
-                <span>{this.state.ticks}</span>
-                <h2>ex05 - Class Component LifeCycle Practice</h2>
+                <h2>ex05-Component LifeCycle: {this.state.ticks}</h2>
                 {
                     this.state.ticks % 10 === 0 ?
-                        null :
+                        null :  
                         <Clock
                             hours={this.state.hours}
                             minutes={this.state.minutes}
@@ -42,10 +45,5 @@ export default class App extends Component {
                 }
             </div>
         );
-    }
-
-    componentWillUnmount() {
-        console.log("called");
-        clearInterval(this.interval );
     }
 }
