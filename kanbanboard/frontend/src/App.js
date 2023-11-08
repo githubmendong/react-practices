@@ -1,13 +1,18 @@
-import React from 'react';
-import './assets/css/App.css';
+import React, {useState} from 'react';
 import KanbanBoard from './KanbanBoard';
+import './assets/css/App.css';
+import data from '../src/assets/json/data.js';
 
-function App() {
+const App = () => {
+
+
+
     return (
-        <div id={'App'} className={'App'}>
-            <KanbanBoard />
+        <div id="App">
+            <KanbanBoard data={data}  />
         </div>
     );
-}
+
+};
 
 export default App;

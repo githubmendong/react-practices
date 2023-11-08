@@ -15,13 +15,13 @@
 	<artifactId>emaillist</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
 		<java.version>17</java.version>
 	</properties>
-	
+
 	<dependencies>
 		<!-- Spring Boot Dev Tools: Live Reload -->
 		<dependency>
@@ -34,21 +34,21 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
 		<!-- MyBatis Starter -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>2.2.0</version>
 		</dependency>
-		
+
 		<!-- lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
-		
-		<!-- mariadb jdbc driver -->		
+
+		<!-- mariadb jdbc driver -->
 		<dependency>
 		    <groupId>org.mariadb.jdbc</groupId>
 		    <artifactId>mariadb-java-client</artifactId>
@@ -61,7 +61,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<finalName>mysite06</finalName>
 		<plugins>
@@ -76,11 +76,11 @@
 						</exclude>
 						<exclude>
 							<groupId>org.springframework.boot</groupId>
-							<artifactId>spring-boot-devtools</artifactId>		
+							<artifactId>spring-boot-devtools</artifactId>
 						</exclude>
 					</excludes>
 				</configuration>
-			</plugin>			
-		</plugins>		
-	</build>				
+			</plugin>
+		</plugins>
+	</build>
 </project>

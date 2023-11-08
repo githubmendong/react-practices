@@ -1,0 +1,6 @@
+com\poscodx\emaillist\exception\GlobalExceptionHandler.class
+com\poscodx\emaillist\vo\EmaillistVo.class
+com\poscodx\emaillist\controller\ApiController.class
+com\poscodx\emaillist\dto\JsonResult.class
+com\poscodx\emaillist\repository\EmaillistRepository.class
+com\poscodx\emaillist\EmaillistApplication.class

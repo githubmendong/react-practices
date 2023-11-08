@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ApiController {
 	@Autowired
 	private EmaillistRepository emaillistRepository;
-	
+
 	@GetMapping("/api")
 	public ResponseEntity<JsonResult> read() {
 		log.info("Request[GET /api]");
@@ -27,16 +27,16 @@ public class ApiController {
 				.status(HttpStatus.OK)
 				.body(JsonResult.success(emaillistRepository.findAll()));
 	}
-	
+
 	@PostMapping("/api")
 	public ResponseEntity<JsonResult> create(@RequestBody EmaillistVo vo) {
 		log.info("Request[POST /api]:" + vo);
-		
+
 		emaillistRepository.insert(vo);
-		
+
 		return ResponseEntity
 				.status(HttpStatus.OK)
 				.body(JsonResult.success(vo));
 	}
-	
+
 }
